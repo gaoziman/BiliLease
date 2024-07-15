@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.leocoder.lease.custom.web.admin.mapper.UserInfoMapper">
+    <resultMap id="BaseResultMap" type="org.leocoder.lease.model.domain.UserInfo">
+        <!--@mbg.generated-->
+        <!--@Table user_info-->
+        <id         column="id"             jdbcType="BIGINT"       property="id"/>
+        <result     column="phone"          jdbcType="VARCHAR"      property="phone"/>
+        <result     column="password"       jdbcType="VARCHAR"      property="password"/>
+        <result     column="avatar_url"     jdbcType="VARCHAR"      property="avatarUrl"/>
+        <result     column="nickname"       jdbcType="VARCHAR"      property="nickname"/>
+        <result     column="status"         jdbcType="TINYINT"      property="status"/>
+        <result     column="create_time"    jdbcType="TIMESTAMP"    property="createTime"/>
+        <result     column="update_time"    jdbcType="TIMESTAMP"    property="updateTime"/>
+        <result     column="is_deleted"     jdbcType="TINYINT"      property="isDeleted"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id,
+        phone,
+        `password`,
+        avatar_url,
+        nickname,
+        `status`,
+        create_time,
+        update_time,
+        is_deleted
+    </sql>
+</mapper>

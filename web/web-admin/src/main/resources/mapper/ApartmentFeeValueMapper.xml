@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.leocoder.lease.custom.web.admin.mapper.ApartmentFeeValueMapper">
+    <resultMap id="BaseResultMap" type="org.leocoder.lease.model.domain.ApartmentFeeValue">
+        <!--@mbg.generated-->
+        <!--@Table apartment_fee_value-->
+        <id          column="id"              jdbcType="BIGINT"      property="id"/>
+        <result      column="apartment_id"    jdbcType="BIGINT"      property="apartmentId"/>
+        <result      column="fee_value_id"    jdbcType="BIGINT"      property="feeValueId"/>
+        <result      column="create_time"     jdbcType="TIMESTAMP"   property="createTime"/>
+        <result      column="update_time"     jdbcType="TIMESTAMP"   property="updateTime"/>
+        <result      column="is_deleted"      jdbcType="TINYINT"     property="isDeleted"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id,
+        apartment_id,
+        fee_value_id,
+        create_time,
+        update_time,
+        is_deleted
+    </sql>
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.leocoder.lease.custom.web.admin.mapper.ApartmentInfoMapper">
+    <resultMap id="BaseResultMap" type="org.leocoder.lease.model.domain.ApartmentInfo">
+        <!--@mbg.generated-->
+        <!--@Table apartment_info-->
+        <id         column="id"                jdbcType="BIGINT"       property="id"/>
+        <result     column="name"              jdbcType="VARCHAR"      property="name"/>
+        <result     column="introduction"      jdbcType="VARCHAR"      property="introduction"/>
+        <result     column="district_id"       jdbcType="BIGINT"       property="districtId"/>
+        <result     column="district_name"     jdbcType="VARCHAR"      property="districtName"/>
+        <result     column="city_id"           jdbcType="BIGINT"       property="cityId"/>
+        <result     column="city_name"         jdbcType="VARCHAR"      property="cityName"/>
+        <result     column="province_id"       jdbcType="BIGINT"       property="provinceId"/>
+        <result     column="province_name"     jdbcType="VARCHAR"      property="provinceName"/>
+        <result     column="address_detail"    jdbcType="VARCHAR"      property="addressDetail"/>
+        <result     column="latitude"          jdbcType="VARCHAR"      property="latitude"/>
+        <result     column="longitude"         jdbcType="VARCHAR"      property="longitude"/>
+        <result     column="phone"             jdbcType="VARCHAR"      property="phone"/>
+        <result     column="is_release"        jdbcType="TINYINT"      property="isRelease"/>
+        <result     column="create_time"       jdbcType="TIMESTAMP"    property="createTime"/>
+        <result     column="update_time"       jdbcType="TIMESTAMP"    property="updateTime"/>
+        <result     column="is_deleted"        jdbcType="TINYINT"      property="isDeleted"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, `name`, introduction, district_id, district_name, city_id, city_name, province_id,
+        province_name, address_detail, latitude, longitude, phone, is_release, create_time,
+        update_time, is_deleted
+    </sql>
+</mapper>

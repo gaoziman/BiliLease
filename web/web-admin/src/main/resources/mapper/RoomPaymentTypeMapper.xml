@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.leocoder.lease.custom.web.admin.mapper.RoomPaymentTypeMapper">
+    <resultMap id="BaseResultMap" type="org.leocoder.lease.model.domain.RoomPaymentType">
+        <!--@mbg.generated-->
+        <!--@Table room_payment_type-->
+        <id         column="id"                 jdbcType="BIGINT"       property="id"/>
+        <result     column="room_id"            jdbcType="BIGINT"       property="roomId"/>
+        <result     column="payment_type_id"    jdbcType="BIGINT"       property="paymentTypeId"/>
+        <result     column="create_time"        jdbcType="TIMESTAMP"    property="createTime"/>
+        <result     column="update_time"        jdbcType="TIMESTAMP"    property="updateTime"/>
+        <result     column="is_deleted"         jdbcType="TINYINT"      property="isDeleted"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, room_id, payment_type_id, create_time, update_time, is_deleted
+    </sql>
+</mapper>
