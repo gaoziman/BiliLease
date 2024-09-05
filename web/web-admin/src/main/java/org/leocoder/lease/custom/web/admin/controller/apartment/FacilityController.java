@@ -3,8 +3,10 @@ package org.leocoder.lease.custom.web.admin.controller.apartment;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
 import org.leocoder.lease.common.convention.result.Result;
 import org.leocoder.lease.common.convention.result.Results;
+import org.leocoder.lease.custom.web.admin.service.FacilityInfoService;
 import org.leocoder.lease.model.domain.FacilityInfo;
 import org.leocoder.lease.model.enums.ItemType;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +23,9 @@ import java.util.List;
 @Tag(name = "配套管理")
 @RestController
 @RequestMapping("/admin/facility")
+@RequiredArgsConstructor
 public class FacilityController {
+    private final FacilityInfoService facilityInfoService;
 
     @Operation(summary = "[根据类型]查询配套信息列表")
     @GetMapping("list")

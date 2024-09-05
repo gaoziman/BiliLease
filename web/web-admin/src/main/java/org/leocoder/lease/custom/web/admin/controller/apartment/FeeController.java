@@ -3,8 +3,10 @@ package org.leocoder.lease.custom.web.admin.controller.apartment;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
 import org.leocoder.lease.common.convention.result.Result;
 import org.leocoder.lease.common.convention.result.Results;
+import org.leocoder.lease.custom.web.admin.service.FeeKeyService;
 import org.leocoder.lease.custom.web.admin.vo.fee.FeeKeyVo;
 import org.leocoder.lease.model.domain.FeeKey;
 import org.leocoder.lease.model.domain.FeeValue;
@@ -22,7 +24,9 @@ import java.util.List;
 @Tag(name = "房间杂费管理")
 @RestController
 @RequestMapping("/admin/fee")
+@RequiredArgsConstructor
 public class FeeController {
+    private final FeeKeyService feeKeyService;
 
     @Operation(summary = "保存或更新杂费名称")
     @PostMapping("key/saveOrUpdate")

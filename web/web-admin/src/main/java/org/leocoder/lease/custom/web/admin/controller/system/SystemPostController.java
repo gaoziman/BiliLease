@@ -1,5 +1,6 @@
 package org.leocoder.lease.custom.web.admin.controller.system;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 */
 @RestController
 @RequestMapping("/admin/system_post")
+@RequiredArgsConstructor
 public class SystemPostController {
         
 

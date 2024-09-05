@@ -2,8 +2,10 @@ package org.leocoder.lease.custom.web.admin.controller.apartment;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
 import org.leocoder.lease.common.convention.result.Result;
 import org.leocoder.lease.common.convention.result.Results;
+import org.leocoder.lease.custom.web.admin.service.LeaseTermService;
 import org.leocoder.lease.model.domain.LeaseTerm;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +21,9 @@ import java.util.List;
 @Tag(name = "租期管理")
 @RequestMapping("/admin/term")
 @RestController
+@RequiredArgsConstructor
 public class LeaseTermController {
+    private final LeaseTermService leaseTermService;
 
     @GetMapping("list")
     @Operation(summary = "查询全部租期列表")

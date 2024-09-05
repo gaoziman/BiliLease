@@ -3,8 +3,10 @@ package org.leocoder.lease.custom.web.admin.controller.apartment;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
 import org.leocoder.lease.common.convention.result.Result;
 import org.leocoder.lease.common.convention.result.Results;
+import org.leocoder.lease.custom.web.admin.service.ApartmentInfoService;
 import org.leocoder.lease.custom.web.admin.vo.apartment.ApartmentDetailVo;
 import org.leocoder.lease.custom.web.admin.vo.apartment.ApartmentItemVo;
 import org.leocoder.lease.custom.web.admin.vo.apartment.ApartmentQueryVo;
@@ -25,7 +27,10 @@ import java.util.List;
 @Tag(name = "公寓信息管理")
 @RestController
 @RequestMapping("/admin/apartment")
+@RequiredArgsConstructor
 public class ApartmentController {
+
+    private final ApartmentInfoService apartmentInfoService;
 
     @Operation(summary = "保存或更新公寓信息")
     @PostMapping("saveOrUpdate")

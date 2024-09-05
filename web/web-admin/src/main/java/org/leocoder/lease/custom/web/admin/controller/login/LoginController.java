@@ -2,6 +2,7 @@ package org.leocoder.lease.custom.web.admin.controller.login;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
 import org.leocoder.lease.common.convention.result.Result;
 import org.leocoder.lease.common.convention.result.Results;
 import org.leocoder.lease.custom.web.admin.vo.login.CaptchaVo;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @Tag(name = "后台管理系统登录管理")
 @RestController
 @RequestMapping("/admin")
+@RequiredArgsConstructor
 public class LoginController {
 
     @Operation(summary = "获取图形验证码")

@@ -3,6 +3,7 @@ package org.leocoder.lease.custom.web.admin.controller.apartment;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
+import lombok.RequiredArgsConstructor;
 import org.leocoder.lease.common.convention.result.Result;
 import org.leocoder.lease.common.convention.result.Results;
 import org.leocoder.lease.custom.web.admin.service.PaymentTypeService;
@@ -22,7 +23,9 @@ import java.util.List;
 @Tag(name = "支付方式管理")
 @RequestMapping("/admin/payment")
 @RestController
+@RequiredArgsConstructor
 public class PaymentTypeController {
+    private final PaymentTypeService service;
 
     @Resource
     private PaymentTypeService paymentTypeService;

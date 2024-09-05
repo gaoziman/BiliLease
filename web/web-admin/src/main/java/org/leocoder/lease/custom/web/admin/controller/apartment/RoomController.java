@@ -3,8 +3,10 @@ package org.leocoder.lease.custom.web.admin.controller.apartment;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
 import org.leocoder.lease.common.convention.result.Result;
 import org.leocoder.lease.common.convention.result.Results;
+import org.leocoder.lease.custom.web.admin.service.RoomFacilityService;
 import org.leocoder.lease.custom.web.admin.vo.room.RoomDetailVo;
 import org.leocoder.lease.custom.web.admin.vo.room.RoomItemVo;
 import org.leocoder.lease.custom.web.admin.vo.room.RoomQueryVo;
@@ -25,7 +27,9 @@ import java.util.List;
 @Tag(name = "房间信息管理")
 @RestController
 @RequestMapping("/admin/room")
+@RequiredArgsConstructor
 public class RoomController {
+    private final RoomFacilityService roomFacilityService;
 
     @Operation(summary = "保存或更新房间信息")
     @PostMapping("saveOrUpdate")
