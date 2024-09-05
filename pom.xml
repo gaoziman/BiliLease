@@ -35,6 +35,11 @@
         <knife4j.version>4.1.0</knife4j.version>
         <aliyun.sms.version>2.0.23</aliyun.sms.version>
         <lombok.version>1.18.20</lombok.version>
+        <hutool-all.version>5.8.20</hutool-all.version>
+        <fastjson2.version>2.0.36</fastjson2.version>
+        <guava.version>30.0-jre</guava.version>
+        <dezermapper.version>6.5.0</dezermapper.version>
+        <dozer-core.version>6.5.2</dozer-core.version>
     </properties>
 
 
@@ -110,6 +115,31 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-all.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.dozermapper</groupId>
+                <artifactId>dozer-core</artifactId>
+                <version>${dozer-core.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>
