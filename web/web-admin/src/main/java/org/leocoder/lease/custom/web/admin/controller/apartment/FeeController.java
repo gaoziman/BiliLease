@@ -3,7 +3,8 @@ package org.leocoder.lease.custom.web.admin.controller.apartment;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.leocoder.lease.common.result.Result;
+import org.leocoder.lease.common.convention.result.Result;
+import org.leocoder.lease.common.convention.result.Results;
 import org.leocoder.lease.custom.web.admin.vo.fee.FeeKeyVo;
 import org.leocoder.lease.model.domain.FeeKey;
 import org.leocoder.lease.model.domain.FeeValue;
@@ -25,32 +26,32 @@ public class FeeController {
 
     @Operation(summary = "保存或更新杂费名称")
     @PostMapping("key/saveOrUpdate")
-    public Result saveOrUpdateFeeKey(@RequestBody FeeKey feeKey) {
-        return Result.success();
+    public Result<Void> saveOrUpdateFeeKey(@RequestBody FeeKey feeKey) {
+        return Results.success();
     }
 
     @Operation(summary = "保存或更新杂费值")
     @PostMapping("value/saveOrUpdate")
-    public Result saveOrUpdateFeeValue(@RequestBody FeeValue feeValue) {
-        return Result.success();
+    public Result<Void> saveOrUpdateFeeValue(@RequestBody FeeValue feeValue) {
+        return Results.success();
     }
 
 
     @Operation(summary = "查询全部杂费名称和杂费值列表")
     @GetMapping("list")
     public Result<List<FeeKeyVo>> feeInfoList() {
-        return Result.success();
+        return Results.success(null);
     }
 
     @Operation(summary = "根据id删除杂费名称")
     @DeleteMapping("key/deleteById")
-    public Result deleteFeeKeyById(@RequestParam Long feeKeyId) {
-        return Result.success();
+    public Result<Void> deleteFeeKeyById(@RequestParam Long feeKeyId) {
+        return Results.success();
     }
 
     @Operation(summary = "根据id删除杂费值")
     @DeleteMapping("value/deleteById")
-    public Result deleteFeeValueById(@RequestParam Long id) {
-        return Result.success();
+    public Result<Void> deleteFeeValueById(@RequestParam Long id) {
+        return Results.success();
     }
 }

@@ -2,7 +2,10 @@ package org.leocoder.lease.custom.web.admin.controller.apartment;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.leocoder.lease.common.result.Result;
+import jakarta.annotation.Resource;
+import org.leocoder.lease.common.convention.result.Result;
+import org.leocoder.lease.common.convention.result.Results;
+import org.leocoder.lease.custom.web.admin.service.PaymentTypeService;
 import org.leocoder.lease.model.domain.PaymentType;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,22 +24,25 @@ import java.util.List;
 @RestController
 public class PaymentTypeController {
 
+    @Resource
+    private PaymentTypeService paymentTypeService;
+
     @Operation(summary = "查询全部支付方式列表")
     @GetMapping("list")
     public Result<List<PaymentType>> listPaymentType() {
-        return Result.success();
+        return Results.success(paymentTypeService.list());
     }
 
     @Operation(summary = "保存或更新支付方式")
     @PostMapping("saveOrUpdate")
-    public Result saveOrUpdatePaymentType(@RequestBody PaymentType paymentType) {
-        return Result.success();
+    public Result<Void> saveOrUpdatePaymentType(@RequestBody PaymentType paymentType) {
+        return Results.success();
     }
 
     @Operation(summary = "根据ID删除支付方式")
     @DeleteMapping("deleteById")
-    public Result deletePaymentById(@RequestParam Long id) {
-        return Result.success();
+    public Result<Void> deletePaymentById(@RequestParam Long id) {
+        return Results.success();
     }
 
 }

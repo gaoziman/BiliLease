@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
  * @description :
  */
 @Configuration
-@MapperScan("org.leocoder.lease.web.*.mapper")
+@MapperScan("org.leocoder.lease.custom.web.*.mapper")
 public class MybatisPlusConfiguration {
 }
