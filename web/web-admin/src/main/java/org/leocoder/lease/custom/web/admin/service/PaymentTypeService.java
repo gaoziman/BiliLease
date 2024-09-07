@@ -17,4 +17,11 @@ public interface PaymentTypeService extends IService<PaymentType>{
          * @param paymentType 支付方式
          */
         void saveOrUpdatePaymentType(PaymentType paymentType);
+
+
+        /**
+         * 根据id删除支付方式
+         * @param id 支付方式id
+         */
+        void deleteById(Long id);
     }
