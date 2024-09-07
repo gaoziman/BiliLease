@@ -37,5 +37,5 @@ public class BaseDO implements Serializable {
     @Schema(description = "是否删除")
     @JsonIgnore
     @TableLogic
-    private Byte isDeleted;
+    private Integer isDeleted;
 }
