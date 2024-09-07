@@ -22,12 +22,12 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         log.info("开始插入填充...");
         this.strictInsertFill(metaObject, "createTime", Date::new, Date.class);
         this.strictInsertFill(metaObject, "updateTime", Date::new, Date.class);
-        this.strictInsertFill(metaObject, "delFlag",   Integer.class,  0);
+        this.strictInsertFill(metaObject, "isDeleted", Integer.class, 0);
     }
 
     @Override
     public void updateFill(MetaObject metaObject) {
         log.info("开始更新填充...");
-        this.strictUpdateFill(metaObject, "updateTime",Date::new, Date.class);
+        this.strictUpdateFill(metaObject, "updateTime", Date::new, Date.class);
     }
 }
