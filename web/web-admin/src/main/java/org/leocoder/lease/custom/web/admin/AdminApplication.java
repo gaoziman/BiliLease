@@ -1,9 +1,9 @@
 package org.leocoder.lease.custom.web.admin;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
 /**
@@ -13,7 +13,7 @@ import org.springframework.core.env.Environment;
  * @description :
  */
 @SpringBootApplication
-@MapperScan("org.leocoder.lease.custom.web.admin.mapper")
+@ComponentScan(basePackages = {"org.leocoder.lease.custom.web.admin", "org.leocoder.lease.common"})
 public class AdminApplication {
     public static void main(String[] args) {
             ConfigurableApplicationContext context = SpringApplication.run(AdminApplication.class, args);

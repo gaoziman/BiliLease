@@ -6,7 +6,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.leocoder.lease.common.convention.result.Result;
 import org.leocoder.lease.common.convention.result.Results;
-import org.leocoder.lease.custom.web.admin.service.AttrValueService;
 import org.leocoder.lease.custom.web.admin.vo.attr.AttrKeyVo;
 import org.leocoder.lease.model.domain.AttrKey;
 import org.leocoder.lease.model.domain.AttrValue;
@@ -26,7 +25,6 @@ import java.util.List;
 @RequestMapping("/admin/attr")
 @RequiredArgsConstructor
 public class AttrController {
-    private final AttrValueService attrService;
 
     @Operation(summary = "新增或更新属性名称")
     @PostMapping("key/saveOrUpdate")
