@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 @Schema(description = "房间信息表")
 @Data
 @TableName(value = "room_info")
-public class RoomInfo extends BaseEntity {
+public class RoomInfo extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "room_number")

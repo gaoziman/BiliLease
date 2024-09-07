@@ -15,7 +15,7 @@ import lombok.Data;
 @Schema(description = "用户信息表")
 @Data
 @TableName(value = "user_info")
-public class UserInfo extends BaseEntity {
+public class UserInfo extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "phone")

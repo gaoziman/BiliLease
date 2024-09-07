@@ -15,7 +15,7 @@ import lombok.Data;
 @Schema(description = "支付方式表")
 @Data
 @TableName(value = "payment_type")
-public class PaymentType extends BaseEntity {
+public class PaymentType extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "`name`")

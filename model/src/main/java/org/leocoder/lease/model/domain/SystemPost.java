@@ -18,7 +18,7 @@ import lombok.Data;
 @Schema(description = "岗位信息表")
 @Data
 @TableName(value = "system_post")
-public class SystemPost extends BaseEntity {
+public class SystemPost extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "code")

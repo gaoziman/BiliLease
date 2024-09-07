@@ -15,7 +15,7 @@ import lombok.Data;
 @Schema(description = "房间基本属性表")
 @Data
 @TableName(value = "attr_key")
-public class AttrKey extends BaseEntity {
+public class AttrKey extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "`name`")

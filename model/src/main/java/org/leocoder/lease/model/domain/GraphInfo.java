@@ -15,7 +15,7 @@ import lombok.Data;
 @Schema(description = "图片信息表")
 @Data
 @TableName(value = "graph_info")
-public class GraphInfo extends BaseEntity {
+public class GraphInfo extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "`name`")

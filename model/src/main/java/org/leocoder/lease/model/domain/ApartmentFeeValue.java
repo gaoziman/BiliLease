@@ -15,7 +15,7 @@ import lombok.Data;
 @Schema(description = "公寓&杂费关联表")
 @Data
 @TableName(value = "apartment_fee_value")
-public class ApartmentFeeValue extends BaseEntity {
+public class ApartmentFeeValue extends BaseDO {
     private static final long serialVersionUID = 1L;
 
 

@@ -15,7 +15,7 @@ import lombok.Data;
 @Schema(description = "房间&支付方式关联表")
 @Data
 @TableName(value = "room_payment_type")
-public class RoomPaymentType extends BaseEntity {
+public class RoomPaymentType extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "room_id")

@@ -1,8 +1,7 @@
 package org.leocoder.lease.model.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -16,23 +15,27 @@ import java.util.Date;
  * @description : 基础实体类
  */
 @Data
-public class BaseEntity implements Serializable {
+public class BaseDO implements Serializable {
 
     @TableId(value = "id", type = IdType.AUTO)
     @Schema(description = "主键id")
     private Long id;
 
-    @TableField(value = "create_time")
+    @TableField(value = "create_time",fill = FieldFill.INSERT)
+    @JsonIgnore
     @Schema(description = "创建时间")
     private Date createTime;
 
 
-    @TableField(value = "update_time")
+    @TableField(value = "update_time",fill = FieldFill.INSERT_UPDATE)
+    @JsonIgnore
     @Schema(description = "更新时间")
     private Date updateTime;
 
 
-    @TableField(value = "is_deleted")
+    @TableField(value = "is_deleted",fill = FieldFill.INSERT)
     @Schema(description = "是否删除")
+    @JsonIgnore
+    @TableLogic
     private Byte isDeleted;
 }

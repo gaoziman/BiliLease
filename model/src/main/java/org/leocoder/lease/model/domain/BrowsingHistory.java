@@ -17,7 +17,7 @@ import java.util.Date;
 @Schema(description = "浏览历史")
 @Data
 @TableName(value = "browsing_history")
-public class BrowsingHistory extends BaseEntity {
+public class BrowsingHistory extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "user_id")

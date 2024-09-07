@@ -15,7 +15,7 @@ import lombok.Data;
 @Schema(description="杂项费用值表")
 @Data
 @TableName(value = "fee_value")
-public class FeeValue extends BaseEntity {
+public class FeeValue extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "`name`")

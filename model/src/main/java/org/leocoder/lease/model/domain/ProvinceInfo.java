@@ -15,7 +15,7 @@ import lombok.Data;
 @Schema
 @Data
 @TableName(value = "province_info")
-public class ProvinceInfo extends BaseEntity {
+public class ProvinceInfo extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "`name`")

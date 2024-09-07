@@ -18,7 +18,7 @@ import java.util.Date;
 @Schema(description = "租约信息表")
 @Data
 @TableName(value = "lease_agreement")
-public class LeaseAgreement extends BaseEntity {
+public class LeaseAgreement extends BaseDO {
     private static final long serialVersionUID = 1L;
 
 

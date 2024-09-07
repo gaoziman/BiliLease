@@ -15,7 +15,7 @@ import lombok.Data;
 @Schema(description = "城市信息")
 @Data
 @TableName(value = "city_info")
-public class CityInfo extends BaseEntity{
+public class CityInfo extends BaseDO {
     private static final long serialVersionUID = 1L;
 
 

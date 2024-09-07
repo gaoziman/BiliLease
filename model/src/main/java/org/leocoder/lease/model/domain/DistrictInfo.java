@@ -15,7 +15,7 @@ import lombok.Data;
 @Schema(description = "区域信息")
 @Data
 @TableName(value = "district_info")
-public class DistrictInfo extends BaseEntity {
+public class DistrictInfo extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "`name`")

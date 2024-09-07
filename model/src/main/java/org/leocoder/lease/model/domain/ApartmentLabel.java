@@ -15,7 +15,7 @@ import lombok.Data;
 @Schema(description = "公寓标签关联表")
 @Data
 @TableName(value = "apartment_label")
-public class ApartmentLabel  extends BaseEntity{
+public class ApartmentLabel  extends BaseDO {
     private static final long serialVersionUID = 1L;
 
 

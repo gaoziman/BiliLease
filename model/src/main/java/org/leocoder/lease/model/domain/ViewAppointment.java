@@ -17,7 +17,7 @@ import java.util.Date;
 @Schema(description="预约看房信息表")
 @Data
 @TableName(value = "view_appointment")
-public class ViewAppointment extends BaseEntity {
+public class ViewAppointment extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "user_id")

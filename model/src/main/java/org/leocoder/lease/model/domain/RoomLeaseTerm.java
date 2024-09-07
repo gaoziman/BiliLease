@@ -15,7 +15,7 @@ import lombok.Data;
 @Schema(description = "房间租期管理表")
 @Data
 @TableName(value = "room_lease_term")
-public class RoomLeaseTerm extends BaseEntity {
+public class RoomLeaseTerm extends BaseDO {
     private static final long serialVersionUID = 1L;
 
     @TableField(value = "room_id")
