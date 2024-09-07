@@ -2,7 +2,6 @@ package org.leocoder.lease.custom.web.admin.controller.apartment;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import org.leocoder.lease.common.convention.result.Result;
 import org.leocoder.lease.common.convention.result.Results;
@@ -25,10 +24,8 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class PaymentTypeController {
-    private final PaymentTypeService service;
+    private final PaymentTypeService paymentTypeService;
 
-    @Resource
-    private PaymentTypeService paymentTypeService;
 
     @Operation(summary = "查询全部支付方式列表")
     @GetMapping("list")
@@ -39,6 +36,7 @@ public class PaymentTypeController {
     @Operation(summary = "保存或更新支付方式")
     @PostMapping("saveOrUpdate")
     public Result<Void> saveOrUpdatePaymentType(@RequestBody PaymentType paymentType) {
+        paymentTypeService.saveOrUpdatePaymentType(paymentType);
         return Results.success();
     }
 

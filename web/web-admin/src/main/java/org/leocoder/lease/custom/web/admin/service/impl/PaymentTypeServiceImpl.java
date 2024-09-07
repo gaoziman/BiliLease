@@ -39,6 +39,11 @@ public class PaymentTypeServiceImpl extends ServiceImpl<PaymentTypeMapper, Payme
             }
         } else {
             // 更新
+            // 判断付款方式是否存在
+            PaymentType existPaymentType = baseMapper.selectById(id);
+            if (ObjectUtil.isNull(existPaymentType)) {
+                throw new ServiceException(LeaseErrorCodeEnum.PAYMENT_TYPE_NOT_EXIST);
+            }
             int i = baseMapper.updateById(paymentType);
             if (i != 1) {
                 throw new ServiceException(LeaseErrorCodeEnum.PAYMENT_TYPE_UPDATE_ERROR);

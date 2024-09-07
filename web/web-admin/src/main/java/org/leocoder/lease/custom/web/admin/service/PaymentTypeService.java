@@ -12,4 +12,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface PaymentTypeService extends IService<PaymentType>{
 
 
-}
+        /**
+         * 保存或更新支付方式
+         * @param paymentType 支付方式
+         */
+        void saveOrUpdatePaymentType(PaymentType paymentType);
+    }
