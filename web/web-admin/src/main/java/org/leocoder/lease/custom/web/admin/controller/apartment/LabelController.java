@@ -1,6 +1,8 @@
 package org.leocoder.lease.custom.web.admin.controller.apartment;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -30,7 +32,9 @@ public class LabelController {
     @Operation(summary = "（根据类型）查询标签列表")
     @GetMapping("list")
     public Result<List<LabelInfo>> labelList(@RequestParam(required = false) ItemType type) {
-        return Results.success(null);
+        LambdaQueryWrapper<LabelInfo> wrapper = Wrappers.lambdaQuery(LabelInfo.class);
+        wrapper.eq(type!= null, LabelInfo::getType, type);
+        return Results.success(labelInfoService.list(wrapper));
     }
 
     @Operation(summary = "新增或修改标签信息")

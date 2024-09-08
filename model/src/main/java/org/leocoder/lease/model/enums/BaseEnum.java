@@ -7,7 +7,7 @@ package org.leocoder.lease.model.enums;
  * @description : 基础枚举接口
  */
 
-public interface BaseEnum {
+public interface BaseEnum<T> {
 
     Integer getCode();
 
