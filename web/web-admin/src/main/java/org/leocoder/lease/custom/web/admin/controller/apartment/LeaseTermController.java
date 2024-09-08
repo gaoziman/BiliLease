@@ -34,12 +34,14 @@ public class LeaseTermController {
     @PostMapping("saveOrUpdate")
     @Operation(summary = "保存或更新租期信息")
     public Result<Void> saveOrUpdate(@RequestBody LeaseTerm leaseTerm) {
+        leaseTermService.saveOrUpdateLeaseTerm(leaseTerm);
         return Results.success();
     }
 
     @DeleteMapping("deleteById")
     @Operation(summary = "根据ID删除租期")
     public Result<Void> deleteLeaseTermById(@RequestParam Long id) {
+        leaseTermService.deleteById(id);
         return Results.success();
     }
 }

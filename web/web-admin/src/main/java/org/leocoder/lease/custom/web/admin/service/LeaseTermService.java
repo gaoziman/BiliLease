@@ -12,4 +12,16 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface LeaseTermService extends IService<LeaseTerm>{
 
 
-}
+        /**
+         * 保存或更新LeaseTerm
+         * @param leaseTerm LeaseTerm对象
+         */
+        void saveOrUpdateLeaseTerm(LeaseTerm leaseTerm);
+
+
+        /**
+         * 根据id删除LeaseTerm
+         * @param id id
+         */
+        void deleteById(Long id);
+    }
